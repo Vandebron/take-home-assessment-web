@@ -22,7 +22,7 @@ export default function ResidentsSelector({ value, onChange }: ResidentsSelector
             {Array(number)
               .fill(null)
               .map((_, i) => (
-                <Users key={i} className={styles.icon} />
+                <Users className={styles.icon} />
               ))}
           </div>
         </button>

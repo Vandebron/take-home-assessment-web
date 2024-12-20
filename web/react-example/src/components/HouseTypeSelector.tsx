@@ -1,5 +1,6 @@
-import React from 'react';
-import { Building2, Home } from 'lucide-react';
+import React, { useEffect, useState } from 'react';
+import { icons, Home, Building, LucideIcon, Building2 } from 'lucide-react';
+import { getHouseTypes } from './HouseTypeSelector.service';
 import styles from './HouseTypeSelector.module.css';
 
 interface HouseTypeSelectorProps {
@@ -7,15 +8,38 @@ interface HouseTypeSelectorProps {
   onChange: (value: string) => void;
 }
 
-const houseTypes = [
-  { id: 'apartment', icon: Building2, label: 'Appartement' },
-  { id: 'house1', icon: Home, label: 'Huis Type 1' },
-  { id: 'house2', icon: Home, label: 'Huis Type 2' },
-  { id: 'house3', icon: Home, label: 'Huis Type 3' },
-  { id: 'house4', icon: Home, label: 'Huis Type 4' },
-];
+type HouseType = {
+  id: string;
+  label: string;
+  icon: LucideIcon;
+};
 
 export default function HouseTypeSelector({ value, onChange }: HouseTypeSelectorProps) {
+
+  const [houseTypes, setHouseTypes] = useState<HouseType[]>([]);
+
+  useEffect(() => {
+    const onLoad = async () => {
+      let types = await getHouseTypes();
+      types.forEach((type) => {
+        // two-person homes
+        if (type.id === 'apartment' || type.id === 'townhouse') {
+          if (type.id === 'apartment') {
+            type.icon = Home;
+          } else if (type.id === 'townhouse') {
+            type.icon = Building;
+          } else {
+            type.icon = Building2;
+          }
+        } else {
+          type.icon = icons['house-plus']
+        }
+      });
+      setHouseTypes(types as HouseType[]);
+    };
+    onLoad();
+  })
+
   return (
     <div className={styles.container}>
       {houseTypes.map((type) => {
@@ -30,7 +54,7 @@ export default function HouseTypeSelector({ value, onChange }: HouseTypeSelector
             className={`${styles.button} ${value === type.id ? styles.selected : ''}`}
             aria-selected={value === type.id}
           >
-            <Icon className={styles.icon} />
+            {Icon ? <Icon className={styles.icon} /> : null}
           </button>
         );
       })}

@@ -10,6 +10,14 @@ export default function ConsumptionCalculator() {
   const [residents, setResidents] = useState(8);
   const [hasSolarPanels, setHasSolarPanels] = useState(false);
 
+  const handleResidentsSelectorChange = (incomingResidents) => {
+    if (incomingResidents > 0) {
+      if (incomingResidents < 10) {
+        setResidents(incomingResidents);
+      }
+    }
+  }
+
   return (
     <div className={styles.calculator}>
       <div className={styles.header}>
@@ -30,7 +38,7 @@ export default function ConsumptionCalculator() {
           </div>
           <div className={styles.section}>
             <p className={styles.label}>Aantal bewoners:</p>
-            <ResidentsSelector value={residents} onChange={setResidents} />
+            <ResidentsSelector value={residents} onChange={handleResidentsSelectorChange} />
           </div>
         </div>
 
