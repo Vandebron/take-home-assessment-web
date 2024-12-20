@@ -2,21 +2,14 @@ import React, { useState } from 'react';
 import { X } from 'lucide-react';
 import HouseTypeSelector from './HouseTypeSelector';
 import ResidentsSelector from './ResidentsSelector';
-import ProductSelector from './ProductSelector';
+import ProductSelector, { EnergyType } from './ProductSelector';
 import styles from './ConsumptionCalculator.module.css';
 
 export default function ConsumptionCalculator() {
   const [houseType, setHouseType] = useState('apartment');
-  const [residents, setResidents] = useState(8);
+  const [residents, setResidents] = useState(2);
+  const [product, setProduct] = useState<EnergyType>();
   const [hasSolarPanels, setHasSolarPanels] = useState(false);
-
-  const handleResidentsSelectorChange = (incomingResidents) => {
-    if (incomingResidents > 0) {
-      if (incomingResidents < 10) {
-        setResidents(incomingResidents);
-      }
-    }
-  }
 
   return (
     <div className={styles.calculator}>
@@ -38,13 +31,13 @@ export default function ConsumptionCalculator() {
           </div>
           <div className={styles.section}>
             <p className={styles.label}>Aantal bewoners:</p>
-            <ResidentsSelector value={residents} onChange={handleResidentsSelectorChange} />
+            <ResidentsSelector value={residents} onChange={setResidents} />
           </div>
         </div>
 
         <div className={styles.section}>
           <p className={styles.label}>Product:</p>
-          <ProductSelector />
+          <ProductSelector value={product} onChange={setProduct} />
         </div>
 
         <div className={styles.footer}>

@@ -1,4 +1,5 @@
-const houseTypes = [
+type HouseType = { id: string; label: string };
+const houseTypes: HouseType[] = [
   { id: 'apartment', label: 'Appartement' },
   { id: 'townhouse', label: 'Tussenwoning' },
   { id: 'corner-house', label: 'Hoekwoning' },
@@ -7,7 +8,7 @@ const houseTypes = [
 ];
 
 /* We know this could return synchronously... Please leave it as an async Promise :) */
-export const getHouseTypes = async () => {
+export const getHouseTypes = async (): Promise<HouseType[]> => {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(houseTypes);

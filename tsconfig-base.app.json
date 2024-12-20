@@ -21,7 +21,10 @@
     "noFallthroughCasesInSwitch": true,
 
     /* Other */
-    "typeRoots": ["./node_modules/@types", "@testing-library/jest-dom", "@testing-library/react"]
+    "typeRoots": ["./node_modules/@types", "@testing-library/jest-dom", "@testing-library/react"],
+    "paths": {
+      "react": ["./node_modules/@types/react"]
+    }
   },
   "include": ["web"]
 }
