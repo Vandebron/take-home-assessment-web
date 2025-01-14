@@ -1,7 +1,7 @@
-import { useEffect, useState } from 'react';
+import { JSX, useEffect, useState } from 'react';
 import { getHouseTypes } from './HouseTypeSelector.service';
 import styles from './HouseTypeSelector.module.css';
-import {  HouseRowHome } from './icons';
+import {  HouseApartment, HouseRowHome } from './icons';
 
 interface HouseTypeSelectorProps {
   value: string;
@@ -17,15 +17,17 @@ type HouseType = {
 export default function HouseTypeSelector({ value, onChange }: HouseTypeSelectorProps) {
 
   const [houseTypes, setHouseTypes] = useState<HouseType[]>([]);
+  console.log('HouseTypeSelector - houseTypes=', houseTypes);
 
   useEffect(() => {
     const onLoad = async () => {
       let types = await getHouseTypes();
+      console.log('HouseTypeSelector - types=', types);
       (types as {id: string, icon?: JSX.Element}[]).forEach((type) => {
         // two-person homes
         if (type.id === 'apartment' || type.id === 'townhouse') {
           if (type.id === 'apartment') {
-            type.icon = <HouseRowHome />;
+            type.icon = <HouseApartment />;
           } else if (type.id === 'townhouse') {
             type.icon = <HouseRowHome />;
           } else {

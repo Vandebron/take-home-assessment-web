@@ -4,7 +4,7 @@
 
     /* Other */
     "typeRoots": ["../../node_modules/@types", "@testing-library/jest-dom", "@testing-library/react", "./types", "./node_modules", "../../node_modules"],
-    "types": ["vitest/globals"],
+    "types": ["vitest/globals", "@testing-library/jest-dom"],
     "baseUrl": ".",
     "paths": {
       "@assets/*": ["./src/assets/*"],

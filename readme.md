@@ -1,10 +1,20 @@
 ## Vandebron Frontend Developer Take-home Assessment
 Thanks for applying to Vandebron!! If you've made it this far we already think you're pretty great. Your assignment is below.
 
-- [ ] Fork the repo and decide on a framework you'd like to complete the project in (currently only React)
-- [ ] Start the project by following the "Getting Started" instructions in the example project. Notice compare what your app looks like now with the desired app shown below.
+- [ ] Clone the repo and decide on a framework you'd like to complete the project in (currently only React)
+- [ ] Start the project by following the "Getting Started" instructions in the example project. Compare what your app looks like now with the desired app shown below.
 
-![Goal app](web/goal-app.png)
+<table>
+  <th>
+    <td>Example Starter App</td>
+    <td>Goal App</td>
+  </th>
+  <tr>
+    <td><img src="./web/starter-app.png" alt="Starter app" width="500"/></td>
+    <td><img src="./web/goal-app.png" alt="Goal app" width="500"/></td>
+  </tr>
+</table>
+
 
 - [ ] There are several areas you can focus on. Pick what you'd like to focus on and implement those. Please don't take more than 4 hours on this.
   - [ ] Update styling of the app to make it look like the goal app above. Note that you do not need to spend any time on the following
@@ -17,7 +27,7 @@ Thanks for applying to Vandebron!! If you've made it this far we already think y
 
   - [ ] Wouldn't it be great if this app were dockerized?
   - [ ] Anything else you think would be good
-- [ ] Send the forked repo as a PR
+- [ ] Zip up your solution and upload it to the Google Drive directory that was given to you. 
 
 
 During your in-person interview, we'll review your PR so be ready to discuss the changes you've made. Happy coding 😃!!

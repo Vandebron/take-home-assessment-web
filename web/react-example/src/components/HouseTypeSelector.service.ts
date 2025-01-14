@@ -11,6 +11,6 @@ export const getHouseTypes = async () => {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(houseTypes);
-    }, 1000);
+    }, 500);
   });
 };

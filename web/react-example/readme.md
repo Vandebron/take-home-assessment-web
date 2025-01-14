@@ -11,5 +11,4 @@ From this project directory, do the following
 
 ### Develop
 1. Run `yarn dev`
-2. Confirm you see an application that looks like this
-![Starter app](starter-app.png)
+2. Confirm you see an application that looks (roughly) like the "Starter App" is shown in [/readme.md](/readme.md)
