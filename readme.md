@@ -11,8 +11,10 @@ Thanks for applying to Vandebron!! If you've made it this far we already think y
       - Implement components other than what is visible in the goal app
       - Using the correct icons
   - [ ] There are a few bugs in the app - feel free to fix any that you find
-  - [ ] The test coverage isn't great... Can you improve it?
   - [ ] Calculate the estimated usage based on the inputs provided - there are no strict rules here but generally the "bigger" the house, the higher your consumption, same for amount of people, etc. Should return a type of `{ electricity: number, gas?: number }`
+  - [ ] For several reasons, the app isn't production-ready. Make changes so that we can be confident the app will run without issue once we're ready to release.
+  - List some suggestions for future improvements you would make if you were given more time.
+
   - [ ] Wouldn't it be great if this app were dockerized?
   - [ ] Anything else you think would be good
 - [ ] Send the forked repo as a PR

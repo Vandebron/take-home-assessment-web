@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import { icons, Home, Building, LucideIcon, Building2 } from 'lucide-react';
+import { useEffect, useState } from 'react';
 import { getHouseTypes } from './HouseTypeSelector.service';
 import styles from './HouseTypeSelector.module.css';
+import {  HouseRowHome } from './icons';
 
 interface HouseTypeSelectorProps {
   value: string;
@@ -11,7 +11,7 @@ interface HouseTypeSelectorProps {
 type HouseType = {
   id: string;
   label: string;
-  icon: LucideIcon;
+  icon: JSX.Element;
 };
 
 export default function HouseTypeSelector({ value, onChange }: HouseTypeSelectorProps) {
@@ -21,18 +21,18 @@ export default function HouseTypeSelector({ value, onChange }: HouseTypeSelector
   useEffect(() => {
     const onLoad = async () => {
       let types = await getHouseTypes();
-      types.forEach((type) => {
+      (types as {id: string, icon?: JSX.Element}[]).forEach((type) => {
         // two-person homes
         if (type.id === 'apartment' || type.id === 'townhouse') {
           if (type.id === 'apartment') {
-            type.icon = Home;
+            type.icon = <HouseRowHome />;
           } else if (type.id === 'townhouse') {
-            type.icon = Building;
+            type.icon = <HouseRowHome />;
           } else {
-            type.icon = Building2;
+            type.icon = <HouseRowHome />;
           }
         } else {
-          type.icon = icons['house-plus']
+          type.icon = <HouseRowHome />
         }
       });
       setHouseTypes(types as HouseType[]);
@@ -54,7 +54,7 @@ export default function HouseTypeSelector({ value, onChange }: HouseTypeSelector
             className={`${styles.button} ${value === type.id ? styles.selected : ''}`}
             aria-selected={value === type.id}
           >
-            {Icon ? <Icon className={styles.icon} /> : null}
+            {Icon ?? null}
           </button>
         );
       })}

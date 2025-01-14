@@ -1,7 +1,14 @@
 {
   "extends": ["../../tsconfig-base.json"],
   "compilerOptions": {
-    "types": ["vitest/globals", "typings"],
-    "typeRoots": ["typings"]
+
+    /* Other */
+    "typeRoots": ["../../node_modules/@types", "@testing-library/jest-dom", "@testing-library/react", "./types", "./node_modules", "../../node_modules"],
+    "types": ["vitest/globals"],
+    "baseUrl": ".",
+    "paths": {
+      "@assets/*": ["./src/assets/*"],
+    },
+    
   }
 }

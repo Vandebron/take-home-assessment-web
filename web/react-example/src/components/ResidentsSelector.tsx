@@ -1,29 +1,25 @@
-import React from 'react';
-import { Users } from 'lucide-react';
 import styles from './ResidentsSelector.module.css';
+import { People1, People2, People3, People4, People5 } from './icons';
+
+const residentOptions = [<People1 />, <People2 />, <People3 />, <People4 />, <People5 />]
 
 interface ResidentsSelectorProps {
   value: number;
   onChange: (value: number) => void;
 }
 
-const residentOptions = [1, 2, 3, 4, 5];
 
 export default function ResidentsSelector({ value, onChange }: ResidentsSelectorProps) {
   return (
     <div className={styles.container}>
-      {residentOptions.map((number) => (
+      {residentOptions.map((residentOption, index) => (
         <button
-          key={number}
-          onClick={() => onChange(number)}
-          className={`${styles.button} ${value === number ? styles.selected : ''}`}
+          key={`residentOption-${index + 1}`}
+          onClick={() => onChange(index + 1)}
+          className={`${styles.button} ${value === index ? styles.selected : ''}`}
         >
           <div className={styles.icons}>
-            {Array(number)
-              .fill(null)
-              .map((_, i) => (
-                <Users className={styles.icon} />
-              ))}
+            {residentOption}
           </div>
         </button>
       ))}
