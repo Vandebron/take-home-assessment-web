@@ -29,4 +29,4 @@ There are several areas you can focus on. Pick what you'd like to focus on and i
 - [ ] List some suggestions for future improvements you would make if you were given more time.
 
 ## All Done?
-Once you're done, zip up your solution and upload it to the Google Drive directory that was given to you. During your in-person interview, we'll review your PR so be ready to discuss the changes you've made. Happy coding 😃!!
+Once you're done, zip up your solution and send it back to us via your favorite file share: Google Drive, Dropbox, etc. During your in-person interview, we'll review your PR so be ready to discuss the changes you've made. Happy coding 😃!!
