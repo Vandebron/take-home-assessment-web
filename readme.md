@@ -26,7 +26,6 @@ There are several areas you can focus on. Pick what you'd like to focus on and i
 - [ ] There are a few bugs in the app - feel free to fix any that you find
 - [ ] Calculate the estimated usage based on the inputs provided - there are no strict rules here but generally the "bigger" the house, the higher your consumption, same for amount of people, etc. Should return a type of `{ electricity: number, gas?: number }`
 - [ ] For several reasons, the app isn't production-ready. Make changes so that we can be confident the app will run without issue once we're ready to release.
-- [ ] List some suggestions for future improvements you would make if you were given more time.
 
 ## All Done?
 Once you're done, zip up your solution and send it back to us via your favorite file share: Google Drive, Dropbox, etc. During your in-person interview, we'll review your PR so be ready to discuss the changes you've made. Happy coding 😃!!
