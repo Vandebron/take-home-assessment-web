@@ -3,7 +3,7 @@ Thanks for applying to Vandebron!! If you've made it this far we already think y
 
 ## Setup
 - Clone the repo and decide on a framework you'd like to complete the project in (currently only React)
-- Start the project by following the "Getting Started" instructions in the example project. Compare what your app looks like now with the desired app shown below.
+- Start the project by following the "Getting Started" instructions in the framework-specific readme (e.g. [web/react-example/readme.md](web/react-example/readme.md)) Compare what your app looks like now with the desired app shown below.
 
 <table>
   <thead>
@@ -28,4 +28,4 @@ There are several areas you can focus on. Pick what you'd like to focus on and i
 - [ ] For several reasons, the app isn't production-ready. Make changes so that we can be confident the app will run without issue once we're ready to release.
 
 ## All Done?
-Once you're done, zip up your solution and send it back to us via your favorite file share: Google Drive, Dropbox, etc. During your in-person interview, we'll review your PR so be ready to discuss the changes you've made. Happy coding 😃!!
+Once you're done, create a PR with your changes and zip up your solution (with the `.git` folder included,) and send it back to us via your favorite file share: Google Drive, Dropbox, etc. During your in-person interview, we'll review the PR so be ready to discuss the changes you've made. Happy coding 😃!!
