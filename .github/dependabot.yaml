@@ -1,6 +1,22 @@
 version: 2
 updates:
-  - package-ecosystem: 'npm'
-    directory: '/'
+
+  - package-ecosystem: "npm"
+    directory: "/"
     schedule:
-      interval: 'weekly'
+      interval: "weekly"
+    reviewers:
+      - Vandebron/guild-frontend
+    commit-message:
+      prefix: chore
+    groups:
+      minor-and-patch-version-updates:
+        applies-to: version-updates
+        update-types:
+          - "minor"
+          - "patch"
+      minor-and-patch-security-updates:
+        applies-to: security-updates
+        update-types:
+          - "minor"
+          - "patch"
