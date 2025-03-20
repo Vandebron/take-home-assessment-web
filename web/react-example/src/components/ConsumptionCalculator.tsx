@@ -9,6 +9,14 @@ export default function ConsumptionCalculator() {
   const [houseType, setHouseType] = useState('apartment');
   const [residents, setResidents] = useState(8);
   const [hasSolarPanels, setHasSolarPanels] = useState(false);
+  const [consumption, setConsumption] = useState({});
+
+  const computedConsumption = {
+    electricity: 0,
+    gas: 0,
+  };
+
+  console.log('ConsumptionCalculator - computedConsumption=', computedConsumption);
 
   const handleResidentsSelectorChange = (incomingResidents) => {
     if (incomingResidents > 0) {
@@ -16,18 +24,14 @@ export default function ConsumptionCalculator() {
         setResidents(incomingResidents);
       }
     }
-  }
+  };
 
   return (
     <div className={styles.calculator}>
       <div className={styles.header}>
         <div>
           <h2 className={styles.title}>Verbruik berekenen</h2>
-          <a href="#" className={styles.link}>Ik weet mijn verbruik</a>
         </div>
-        <button className={styles.closeButton}>
-          <X size={24} />
-        </button>
       </div>
 
       <div className={styles.content}>
