@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { X } from 'lucide-react';
 import HouseTypeSelector from './HouseTypeSelector';
 import ResidentsSelector from './ResidentsSelector';
@@ -7,14 +7,12 @@ import styles from './ConsumptionCalculator.module.css';
 
 export default function ConsumptionCalculator() {
   const [houseType, setHouseType] = useState('apartment');
-  const [residents, setResidents] = useState(8);
+  const [residents, setResidents] = useState(1); 
   const [hasSolarPanels, setHasSolarPanels] = useState(false);
 
-  const handleResidentsSelectorChange = (incomingResidents) => {
-    if (incomingResidents > 0) {
-      if (incomingResidents < 10) {
-        setResidents(incomingResidents);
-      }
+  const handleResidentsSelectorChange = (incomingResidents: number) => {
+    if (incomingResidents >= 1 && incomingResidents <= 5) {
+      setResidents(incomingResidents);
     }
   }
 
