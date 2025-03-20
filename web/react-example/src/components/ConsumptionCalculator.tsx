@@ -1,14 +1,25 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { X } from 'lucide-react';
 import HouseTypeSelector from './HouseTypeSelector';
 import ResidentsSelector from './ResidentsSelector';
 import ProductSelector from './ProductSelector';
+import { calculateConsumption } from '../utils/consumptionCalculator';
 import styles from './ConsumptionCalculator.module.css';
 
 export default function ConsumptionCalculator() {
   const [houseType, setHouseType] = useState('apartment');
-  const [residents, setResidents] = useState(1); 
+  const [residents, setResidents] = useState(1);
   const [hasSolarPanels, setHasSolarPanels] = useState(false);
+  const [estimatedConsumption, setEstimatedConsumption] = useState<{ electricity: number }>({ electricity: 0 });
+
+  useEffect(() => {
+    const consumption = calculateConsumption({
+      houseType: houseType as any, // TODO: Add proper type validation
+      residents,
+      hasSolarPanels
+    });
+    setEstimatedConsumption(consumption);
+  }, [houseType, residents, hasSolarPanels]);
 
   const handleResidentsSelectorChange = (incomingResidents: number) => {
     if (incomingResidents >= 1 && incomingResidents <= 5) {
@@ -43,6 +54,11 @@ export default function ConsumptionCalculator() {
         <div className={styles.section}>
           <p className={styles.label}>Product:</p>
           <ProductSelector />
+        </div>
+
+        <div className={styles.section}>
+          <p className={styles.label}>Geschat jaarlijks verbruik:</p>
+          <p className={styles.consumption}>{estimatedConsumption.electricity} kWh</p>
         </div>
 
         <div className={styles.footer}>
