@@ -1,7 +1,7 @@
 .calculator {
   max-width: 48rem;
   margin: 0 auto;
-  background: white;
+  background: #f3f3f3;
   border-radius: 0.5rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 2rem;
@@ -9,9 +9,17 @@
 
 .header {
   display: flex;
-  justify-content: space-between;
+  gap: 1rem;
   align-items: center;
   margin-bottom: 2rem;
+}
+.header a {
+  color: #6b7280;
+  text-decoration: underline;
+}
+
+.header a:hover {
+  color: black;
 }
 
 .title {
@@ -52,21 +60,28 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  gap: 10rem;
 }
 
 .section {
   flex: 1;
 }
 
-.label {
+.label p {
   color: #374151;
   font-weight: 500;
   margin-bottom: 1rem;
+  display: inline;
+}
+
+.label {
+  color: #6b7280;
+  margin-block: 1rem;
 }
 
 .footer {
   display: flex;
-  align-items: center;
+  margin-left: auto;
   justify-content: space-between;
 }
 
