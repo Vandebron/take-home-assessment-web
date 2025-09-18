@@ -13,7 +13,7 @@ dist-ssr
 *.local
 
 # Editor directories and files
-.vscode/*
+.vscode
 !.vscode/extensions.json
 .idea
 .DS_Store
@@ -26,3 +26,15 @@ dist-ssr
 
 # Testing
 coverage
+
+# Yarn
+vite.config.ts.timestamp-*
+
+## Yarn PnP
+.yarn/*
+!.yarn/cache
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions

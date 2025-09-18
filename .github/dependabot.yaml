@@ -5,8 +5,6 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
-    reviewers:
-      - Vandebron/guild-frontend
     commit-message:
       prefix: chore
     groups:
@@ -20,3 +18,10 @@ updates:
         update-types:
           - "minor"
           - "patch"
+    cooldown:
+      default-days: 5
+      semver-major-days: 30
+      semver-minor-days: 7
+      semver-patch-days: 3
+      include:
+        - "*"
