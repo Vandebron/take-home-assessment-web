@@ -1,0 +1,3 @@
+defaultSemverRangePrefix: '' # pins dependencies to exact versions during install
+enableScripts: false # prevents 3rd party packages from running postinstall scripts
+enableImmutableInstalls: true # Equivalent to --frozen-lockfile
