@@ -3033,7 +3033,7 @@ const RAW_RUNTIME_STATE =
           ["@vitest/coverage-v8", "virtual:8cb15926eb717dd76a2145fef13977bd0ca81c223d43c33059c9c564d994b58d805f5eec3191ab4801e9986022dd78dc8c442d3c549ac7e8f55c260e8e9e82fd#npm:2.1.8"],\
           ["eslint-plugin-react-hooks", "virtual:8cb15926eb717dd76a2145fef13977bd0ca81c223d43c33059c9c564d994b58d805f5eec3191ab4801e9986022dd78dc8c442d3c549ac7e8f55c260e8e9e82fd#npm:5.2.0"],\
           ["eslint-plugin-react-refresh", "virtual:8cb15926eb717dd76a2145fef13977bd0ca81c223d43c33059c9c564d994b58d805f5eec3191ab4801e9986022dd78dc8c442d3c549ac7e8f55c260e8e9e82fd#npm:0.4.20"],\
-          ["globals", "npm:15.15.0"],\
+          ["globals", "npm:16.4.0"],\
           ["jest", "virtual:8cb15926eb717dd76a2145fef13977bd0ca81c223d43c33059c9c564d994b58d805f5eec3191ab4801e9986022dd78dc8c442d3c549ac7e8f55c260e8e9e82fd#npm:29.7.0"],\
           ["jest-environment-jsdom", "virtual:8cb15926eb717dd76a2145fef13977bd0ca81c223d43c33059c9c564d994b58d805f5eec3191ab4801e9986022dd78dc8c442d3c549ac7e8f55c260e8e9e82fd#npm:29.7.0"],\
           ["jsdom", "virtual:8cb15926eb717dd76a2145fef13977bd0ca81c223d43c33059c9c564d994b58d805f5eec3191ab4801e9986022dd78dc8c442d3c549ac7e8f55c260e8e9e82fd#npm:26.1.0"],\
@@ -5048,10 +5048,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["npm:15.15.0", {\
-        "packageLocation": "../../.yarn/berry/cache/globals-npm-15.15.0-5ddcb6c553-10c0.zip/node_modules/globals/",\
+      ["npm:16.4.0", {\
+        "packageLocation": "../../.yarn/berry/cache/globals-npm-16.4.0-1986d69a8b-10c0.zip/node_modules/globals/",\
         "packageDependencies": [\
-          ["globals", "npm:15.15.0"]\
+          ["globals", "npm:16.4.0"]\
         ],\
         "linkType": "HARD"\
       }]\
