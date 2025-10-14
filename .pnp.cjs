@@ -956,6 +956,13 @@ const RAW_RUNTIME_STATE =
           ["@bcoe/v8-coverage", "npm:0.2.3"]\
         ],\
         "linkType": "HARD"\
+      }],\
+      ["npm:1.0.2", {\
+        "packageLocation": "../../.yarn/berry/cache/@bcoe-v8-coverage-npm-1.0.2-e80fdc21ac-10c0.zip/node_modules/@bcoe/v8-coverage/",\
+        "packageDependencies": [\
+          ["@bcoe/v8-coverage", "npm:1.0.2"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["@csstools/color-helpers", [\
@@ -3030,7 +3037,7 @@ const RAW_RUNTIME_STATE =
           ["@types/react-dom", "virtual:3dd19d17c4f8c03a18d97e44d90047c23d2408d8e9d84d1d29e3da0d99a0c9789db3a6ff46170754519dafb7e4ebfc521268479cc438357616a041263d4a1bde#npm:19.1.9"],\
           ["@vandebron/react-example", "workspace:web/react-example"],\
           ["@vitejs/plugin-react", "virtual:8cb15926eb717dd76a2145fef13977bd0ca81c223d43c33059c9c564d994b58d805f5eec3191ab4801e9986022dd78dc8c442d3c549ac7e8f55c260e8e9e82fd#npm:4.7.0"],\
-          ["@vitest/coverage-v8", "virtual:8cb15926eb717dd76a2145fef13977bd0ca81c223d43c33059c9c564d994b58d805f5eec3191ab4801e9986022dd78dc8c442d3c549ac7e8f55c260e8e9e82fd#npm:2.1.8"],\
+          ["@vitest/coverage-v8", "virtual:8cb15926eb717dd76a2145fef13977bd0ca81c223d43c33059c9c564d994b58d805f5eec3191ab4801e9986022dd78dc8c442d3c549ac7e8f55c260e8e9e82fd#npm:3.2.4"],\
           ["eslint-plugin-react-hooks", "virtual:8cb15926eb717dd76a2145fef13977bd0ca81c223d43c33059c9c564d994b58d805f5eec3191ab4801e9986022dd78dc8c442d3c549ac7e8f55c260e8e9e82fd#npm:5.2.0"],\
           ["eslint-plugin-react-refresh", "virtual:8cb15926eb717dd76a2145fef13977bd0ca81c223d43c33059c9c564d994b58d805f5eec3191ab4801e9986022dd78dc8c442d3c549ac7e8f55c260e8e9e82fd#npm:0.4.20"],\
           ["globals", "npm:16.4.0"],\
@@ -3114,22 +3121,23 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@vitest/coverage-v8", [\
-      ["npm:2.1.8", {\
-        "packageLocation": "../../.yarn/berry/cache/@vitest-coverage-v8-npm-2.1.8-cdccf9a4ff-10c0.zip/node_modules/@vitest/coverage-v8/",\
+      ["npm:3.2.4", {\
+        "packageLocation": "../../.yarn/berry/cache/@vitest-coverage-v8-npm-3.2.4-11f6061269-10c0.zip/node_modules/@vitest/coverage-v8/",\
         "packageDependencies": [\
-          ["@vitest/coverage-v8", "npm:2.1.8"]\
+          ["@vitest/coverage-v8", "npm:3.2.4"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:8cb15926eb717dd76a2145fef13977bd0ca81c223d43c33059c9c564d994b58d805f5eec3191ab4801e9986022dd78dc8c442d3c549ac7e8f55c260e8e9e82fd#npm:2.1.8", {\
-        "packageLocation": "./.yarn/__virtual__/@vitest-coverage-v8-virtual-589e4fbca1/3/.yarn/berry/cache/@vitest-coverage-v8-npm-2.1.8-cdccf9a4ff-10c0.zip/node_modules/@vitest/coverage-v8/",\
+      ["virtual:8cb15926eb717dd76a2145fef13977bd0ca81c223d43c33059c9c564d994b58d805f5eec3191ab4801e9986022dd78dc8c442d3c549ac7e8f55c260e8e9e82fd#npm:3.2.4", {\
+        "packageLocation": "./.yarn/__virtual__/@vitest-coverage-v8-virtual-3db893057f/3/.yarn/berry/cache/@vitest-coverage-v8-npm-3.2.4-11f6061269-10c0.zip/node_modules/@vitest/coverage-v8/",\
         "packageDependencies": [\
           ["@ampproject/remapping", "npm:2.3.0"],\
-          ["@bcoe/v8-coverage", "npm:0.2.3"],\
+          ["@bcoe/v8-coverage", "npm:1.0.2"],\
           ["@types/vitest", null],\
           ["@types/vitest__browser", null],\
           ["@vitest/browser", null],\
-          ["@vitest/coverage-v8", "virtual:8cb15926eb717dd76a2145fef13977bd0ca81c223d43c33059c9c564d994b58d805f5eec3191ab4801e9986022dd78dc8c442d3c549ac7e8f55c260e8e9e82fd#npm:2.1.8"],\
+          ["@vitest/coverage-v8", "virtual:8cb15926eb717dd76a2145fef13977bd0ca81c223d43c33059c9c564d994b58d805f5eec3191ab4801e9986022dd78dc8c442d3c549ac7e8f55c260e8e9e82fd#npm:3.2.4"],\
+          ["ast-v8-to-istanbul", "npm:0.3.5"],\
           ["debug", "virtual:5061e91c753dbf4548ecb49e9bb9ba9e0e4c8f5a1821505b8db911064b201bcdac1d7495c04cad1e1fc52e8fb2e635cb5a3d4f0c4ba6e4e9bfa1863108b13359#npm:4.4.3"],\
           ["istanbul-lib-coverage", "npm:3.2.2"],\
           ["istanbul-lib-report", "npm:3.0.1"],\
@@ -3139,7 +3147,7 @@ const RAW_RUNTIME_STATE =
           ["magicast", "npm:0.3.5"],\
           ["std-env", "npm:3.9.0"],\
           ["test-exclude", "npm:7.0.1"],\
-          ["tinyrainbow", "npm:1.2.0"],\
+          ["tinyrainbow", "npm:2.0.0"],\
           ["vitest", "virtual:8cb15926eb717dd76a2145fef13977bd0ca81c223d43c33059c9c564d994b58d805f5eec3191ab4801e9986022dd78dc8c442d3c549ac7e8f55c260e8e9e82fd#npm:3.2.4"]\
         ],\
         "packagePeers": [\
@@ -3450,6 +3458,18 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../.yarn/berry/cache/assertion-error-npm-2.0.1-8169d136f2-10c0.zip/node_modules/assertion-error/",\
         "packageDependencies": [\
           ["assertion-error", "npm:2.0.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["ast-v8-to-istanbul", [\
+      ["npm:0.3.5", {\
+        "packageLocation": "../../.yarn/berry/cache/ast-v8-to-istanbul-npm-0.3.5-c4d8a5f626-10c0.zip/node_modules/ast-v8-to-istanbul/",\
+        "packageDependencies": [\
+          ["@jridgewell/trace-mapping", "npm:0.3.31"],\
+          ["ast-v8-to-istanbul", "npm:0.3.5"],\
+          ["estree-walker", "npm:3.0.3"],\
+          ["js-tokens", "npm:9.0.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -7778,13 +7798,6 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["tinyrainbow", [\
-      ["npm:1.2.0", {\
-        "packageLocation": "../../.yarn/berry/cache/tinyrainbow-npm-1.2.0-456cccee06-10c0.zip/node_modules/tinyrainbow/",\
-        "packageDependencies": [\
-          ["tinyrainbow", "npm:1.2.0"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
       ["npm:2.0.0", {\
         "packageLocation": "../../.yarn/berry/cache/tinyrainbow-npm-2.0.0-b4ba575b93-10c0.zip/node_modules/tinyrainbow/",\
         "packageDependencies": [\
