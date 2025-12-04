@@ -27,10 +27,7 @@ type HouseType = HouseTypeData & {
  * Displays a selection of house types with icons.
  * Loads house type data asynchronously and assigns appropriate icons.
  */
-export default function HouseTypeSelector({
-  value,
-  onChange,
-}: HouseTypeSelectorProps) {
+export default function HouseTypeSelector({ value, onChange }: HouseTypeSelectorProps) {
   const [houseTypes, setHouseTypes] = useState<HouseType[]>([]);
 
   useEffect(() => {
@@ -71,11 +68,7 @@ export default function HouseTypeSelector({
   }, []);
 
   return (
-    <div
-      className={styles.container}
-      role="group"
-      aria-label="House type selection"
-    >
+    <div className={styles.container} role="group" aria-label="House type selection">
       {houseTypes.map(({ id, label, icon: Icon }) => (
         <button
           key={id}

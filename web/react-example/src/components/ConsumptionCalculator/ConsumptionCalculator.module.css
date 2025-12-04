@@ -35,7 +35,9 @@
   border: none;
   background: none;
   padding: 0;
-  transition: color 0.2s, opacity 0.2s;
+  transition:
+    color 0.2s,
+    opacity 0.2s;
 }
 
 .link:hover {
@@ -254,7 +256,9 @@
   left: 50%;
   transform: translateX(-50%);
   opacity: 0;
-  transition: opacity 0.2s, visibility 0.2s;
+  transition:
+    opacity 0.2s,
+    visibility 0.2s;
   font-size: 0.875rem;
   font-weight: 400;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
@@ -262,7 +266,7 @@
 }
 
 .tooltipText::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 100%;
   left: 50%;
@@ -324,7 +328,7 @@
     align-items: flex-start; /* Left align on mobile */
     gap: 2rem;
   }
-  
+
   .button {
     width: 100%;
     justify-content: center;

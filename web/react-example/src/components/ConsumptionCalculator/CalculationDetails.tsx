@@ -70,8 +70,8 @@ export default function CalculationDetails({
             <h3 className={styles.sectionTitle}>Stroom</h3>
             <div className={styles.calculation}>
               <p>
-                Basis ({CONSUMPTION_CONSTANTS.BASE_ELECTRICITY_PER_PERSON} kWh) × {residents} bewoners
-                × {multiplier} woningfactor
+                Basis ({CONSUMPTION_CONSTANTS.BASE_ELECTRICITY_PER_PERSON} kWh) × {residents}{' '}
+                bewoners × {multiplier} woningfactor
                 {hasSolarPanels ? ' × 0.7 (zonnepanelen)' : ''}
               </p>
               <p className={styles.total}>= {electricity} kWh</p>
@@ -101,4 +101,3 @@ export default function CalculationDetails({
     </dialog>
   );
 }
-

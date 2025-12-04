@@ -57,7 +57,7 @@ export default function ConsumptionCalculator() {
    */
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    
+
     if (mode === 'manual') {
       console.log('Manual input:', {
         electricity: parseInt(manualElectricity) || 0,
@@ -83,11 +83,7 @@ export default function ConsumptionCalculator() {
               {mode === 'calculator' ? 'Ik weet mijn verbruik' : 'Help mij schatten'}
             </button>
           </h1>
-          <button 
-            type="button"
-            className={styles.closeButton} 
-            aria-label="Close"
-          >
+          <button type="button" className={styles.closeButton} aria-label="Close">
             ×
           </button>
         </header>
@@ -98,7 +94,8 @@ export default function ConsumptionCalculator() {
               <div className={styles.row}>
                 <fieldset className={styles.section}>
                   <legend className={styles.label}>
-                    Type woning: <span className={styles.labelValue}>{getHouseTypeLabel(houseType)}</span>
+                    Type woning:{' '}
+                    <span className={styles.labelValue}>{getHouseTypeLabel(houseType)}</span>
                   </legend>
                   <HouseTypeSelector value={houseType} onChange={setHouseType} />
                 </fieldset>
@@ -146,11 +143,7 @@ export default function ConsumptionCalculator() {
                     </label>
                   </div>
 
-                  <button
-                    type="submit"
-                    className={styles.button}
-                    aria-label="Bereken verbruik"
-                  >
+                  <button type="submit" className={styles.button} aria-label="Bereken verbruik">
                     <span>Ok</span>
                     <span aria-hidden="true">→</span>
                   </button>
@@ -198,11 +191,7 @@ export default function ConsumptionCalculator() {
               </div>
 
               <div className={styles.buttonRow}>
-                <button
-                  type="submit"
-                  className={styles.button}
-                  aria-label="Bereken verbruik"
-                >
+                <button type="submit" className={styles.button} aria-label="Bereken verbruik">
                   <span>Ok</span>
                   <span aria-hidden="true">→</span>
                 </button>
