@@ -3,14 +3,14 @@ import styles from './CalculationDetails.module.css';
 import { CONSUMPTION_CONSTANTS, HOUSE_TYPE_LABELS } from '../constants';
 
 interface CalculationDetailsProps {
-  isOpen: boolean;
-  onClose: () => void;
-  houseType: string;
-  residents: number;
-  hasSolarPanels: boolean;
-  multiplier: number;
-  electricity: number;
-  gas?: number;
+  readonly isOpen: boolean;
+  readonly onClose: () => void;
+  readonly houseType: string;
+  readonly residents: number;
+  readonly hasSolarPanels: boolean;
+  readonly multiplier: number;
+  readonly electricity: number;
+  readonly gas?: number;
 }
 
 /**
@@ -32,7 +32,7 @@ export default function CalculationDetails({
   if (!isOpen) return null;
 
   return (
-    <div className={styles.overlay} role="dialog" aria-labelledby="details-title">
+    <dialog className={styles.overlay} open aria-labelledby="details-title">
       <div className={styles.modal}>
         <header className={styles.header}>
           <h2 id="details-title" className={styles.title}>
@@ -98,7 +98,7 @@ export default function CalculationDetails({
           </button>
         </footer>
       </div>
-    </div>
+    </dialog>
   );
 }
 
