@@ -41,43 +41,5 @@ jobs:
       - name: Build project
         run: yarn workspace @vandebron/react-example build
 
-      - name: Upload coverage reports
-        uses: codecov/codecov-action@v4
-        if: always()
-        with:
-          files: ./web/react-example/coverage/coverage-final.json
-          flags: unittests
-          name: codecov-umbrella
-          fail_ci_if_error: false
-
-  security:
-    name: Security Checks
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0  # Full history for better secret detection
-
-      - name: Run Trivy vulnerability scanner
-        uses: aquasecurity/trivy-action@master
-        with:
-          scan-type: 'fs'
-          scan-ref: '.'
-          format: 'sarif'
-          output: 'trivy-results.sarif'
-
-      - name: Upload Trivy results to GitHub Security tab
-        uses: github/codeql-action/upload-sarif@v3
-        if: always()
-        with:
-          sarif_file: 'trivy-results.sarif'
-
-      # Note: Secret scanning is handled by SonarCloud
-
-      - name: Run npm audit
-        run: |
-          cd web/react-example
-          yarn npm audit --all --recursive || true
-
+# Note: Security scanning, code coverage, and vulnerability detection
+# are handled by SonarCloud which runs automatically on PRs
