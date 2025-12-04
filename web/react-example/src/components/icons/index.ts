@@ -1,11 +1,7 @@
 export { SvgComponent as Electric } from './energy-stroom.tsx';
 export { SvgComponent as ElectricAndGas } from './energy-stroom-en-gas.tsx';
 
-export { SvgComponent as Battery } from './opties-batterij.tsx';
-export { SvgComponent as HeatPump } from './opties-warmtepomp.tsx';
-export { SvgComponent as Laadpal } from './opties-laadpaal.tsx';
 export { SvgComponent as SolarPanel } from './opties-zonnepanelen.tsx';
-export { SvgComponent as None } from './opties-geen.tsx';
 
 export { SvgComponent as HouseApartment } from './woning-apartment.tsx';
 export { SvgComponent as HouseCornerHouse } from './woning-hoekwoning.tsx';

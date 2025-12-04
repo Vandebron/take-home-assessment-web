@@ -1,0 +1,15 @@
+# Code Owners
+# These owners will be automatically requested for review when someone opens a pull request.
+
+# Global owners
+* @vandebron/frontend-team
+
+# React app specific
+/web/react-example/ @vandebron/frontend-team
+
+# GitHub workflows
+/.github/ @vandebron/frontend-team
+
+# Documentation
+*.md @vandebron/frontend-team
+

@@ -1,0 +1,17 @@
+# Gitleaks ignore patterns
+# Add false positives here
+
+# Example env files (no real secrets)
+.env.example
+.env.production
+
+# Test files with mock data
+**/*.test.ts
+**/*.test.tsx
+**/*.spec.ts
+
+# Documentation examples
+**/readme.md
+**/README.md
+**/CONTRIBUTING.md
+

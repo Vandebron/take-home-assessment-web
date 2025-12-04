@@ -1,0 +1,11 @@
+# Robots.txt for Vandebron Calculator
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://vandebron.nl/sitemap.xml
+
+# Crawl-delay (optional, adjust as needed)
+Crawl-delay: 1
+

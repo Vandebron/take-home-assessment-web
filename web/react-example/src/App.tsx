@@ -1,11 +1,20 @@
 import React from 'react';
+import ErrorBoundary from './components/ErrorBoundary';
 import ConsumptionCalculator from './components/ConsumptionCalculator';
 import styles from './App.module.css';
 
-export default function App() {
+/**
+ * App Component
+ *
+ * Root application component that renders the consumption calculator
+ * within a centered container layout, wrapped in an error boundary.
+ */
+export default function App(): JSX.Element {
   return (
-    <div className={styles.container}>
-      <ConsumptionCalculator />
-    </div>
+    <ErrorBoundary>
+      <div className={styles.container}>
+        <ConsumptionCalculator />
+      </div>
+    </ErrorBoundary>
   );
 }

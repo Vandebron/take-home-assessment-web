@@ -1,0 +1,332 @@
+.calculator {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  background: #f9fafc;
+  border-radius: 12px;
+  padding: 2.5rem 3.5rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 30px 60px rgba(15, 23, 42, 0.08);
+}
+
+.header {
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #374151;
+  margin: 0;
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.link {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #374151;
+  text-decoration: underline;
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
+  transition: color 0.2s, opacity 0.2s;
+}
+
+.link:hover {
+  color: #1f2937;
+  opacity: 0.7;
+}
+
+.link:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+.closeButton {
+  font-size: 2rem;
+  color: #374151;
+  cursor: pointer;
+  line-height: 1;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.closeButton:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: stretch; /* Ensure columns are same height */
+}
+
+.section {
+  border: none;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+
+.label {
+  display: block;
+  width: 100%;
+  color: #374151;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 0;
+}
+
+.labelValue {
+  font-weight: 400;
+  color: #6b7280;
+  margin-left: 0.5rem;
+}
+
+/* Manual Input Styles */
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  width: 100%;
+  padding: 0.75rem 3.5rem 0.75rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: #374151;
+  background-color: #f9fafb;
+  /* Hide number input spinners */
+  -moz-appearance: textfield;
+}
+
+.input::-webkit-outer-spin-button,
+.input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input:focus {
+  outline: 2px solid #2563eb;
+  outline-offset: -1px;
+  border-color: #2563eb;
+  background-color: white;
+}
+
+.suffix {
+  position: absolute;
+  right: 1rem;
+  color: #6b7280;
+  font-weight: 500;
+  pointer-events: none;
+}
+
+/* Action Column: Contains Checkbox and Button */
+.actionColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end; /* Align items to the right */
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  align-self: flex-start; /* Align checkbox to the left of the column (or match screenshot) */
+  /* Screenshot: Checkbox is aligned with "Product" title height */
+  /* Since we are in the right column, aligning flex-start puts it at the top */
+  height: 1.5rem; /* Match label line-height approx */
+  margin-bottom: 1rem;
+}
+
+.checkbox label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  color: #374151;
+  font-weight: 600;
+  font-size: 0.875rem;
+  user-select: none;
+}
+
+.checkbox input {
+  appearance: none;
+  width: 1.125rem;
+  height: 1.125rem;
+  border: 1px solid #9ca3af;
+  border-radius: 3px;
+  margin-right: 0.5rem;
+  cursor: pointer;
+  position: relative;
+  background: #f3f4f6;
+}
+
+.checkbox input:checked {
+  background-color: #374151;
+  border-color: #374151;
+}
+
+.checkbox input:checked::after {
+  content: '✓';
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.8rem;
+}
+
+.checkbox input:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+.checkbox svg {
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
+.infoIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1rem;
+  height: 1rem;
+  background-color: #c9ced6;
+  color: white;
+  border-radius: 50%;
+  font-size: 0.625rem;
+  font-weight: 600;
+  font-style: italic;
+  font-family: serif;
+  cursor: help;
+  transition: background-color 0.2s;
+  margin-left: 0.5rem;
+}
+
+.infoIcon:hover {
+  background-color: #6b7280;
+}
+
+/* Custom Tooltip Styles */
+.tooltipWrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.tooltipText {
+  visibility: hidden;
+  width: 200px;
+  background-color: #1f2937;
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+  padding: 0.5rem;
+  position: absolute;
+  z-index: 100;
+  bottom: 150%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.2s, visibility 0.2s;
+  font-size: 0.875rem;
+  font-weight: 400;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  pointer-events: none;
+}
+
+.tooltipText::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #1f2937 transparent transparent transparent;
+}
+
+.tooltipWrapper:hover .tooltipText {
+  visibility: visible;
+  opacity: 1;
+}
+
+.buttonRow {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button {
+  background-color: #2f3643;
+  color: white;
+  min-height: 56px;
+  padding: 0 2rem;
+  border-radius: 0;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.2s;
+  font-weight: 400;
+  font-size: 1rem;
+  margin-top: auto;
+  box-shadow: 0 12px 25px rgba(15, 23, 42, 0.18);
+}
+
+.button:hover {
+  background-color: #1f2937;
+}
+
+.button:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+@media (max-width: 768px) {
+  .calculator {
+    padding: 1.5rem;
+  }
+
+  .row {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .actionColumn {
+    align-items: flex-start; /* Left align on mobile */
+    gap: 2rem;
+  }
+  
+  .button {
+    width: 100%;
+    justify-content: center;
+  }
+}

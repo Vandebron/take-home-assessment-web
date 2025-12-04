@@ -1,13 +1,52 @@
 <!doctype html>
-<html lang="en">
+<html lang="nl">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
+    
+    <!-- SEO Meta Tags -->
+    <title>Verbruik Berekenen | Energie Calculator</title>
+    <meta name="description" content="Bereken eenvoudig je energieverbruik op basis van je woningtype, aantal bewoners en energieproduct." />
+    <meta name="keywords" content="energie, verbruik, calculator, stroom, gas, zonnepanelen" />
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Verbruik Berekenen | Energie Calculator" />
+    <meta property="og:description" content="Bereken eenvoudig je energieverbruik op basis van je woningtype, aantal bewoners en energieproduct." />
+    
+    <!-- Accessibility -->
+    <meta name="theme-color" content="#2563eb" />
+    
+    <!-- Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Energie Verbruik Calculator",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "description": "Bereken je energieverbruik op basis van woningtype, aantal bewoners en energieproduct",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      }
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>
+    <noscript>
+      <div style="padding: 2rem; text-align: center;">
+        <h1>JavaScript Required</h1>
+        <p>Deze applicatie vereist JavaScript om te werken. Schakel JavaScript in je browser in.</p>
+      </div>
+    </noscript>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
