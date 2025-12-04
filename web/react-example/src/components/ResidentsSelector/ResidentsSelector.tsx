@@ -15,8 +15,8 @@ const residentOptions: JSX.Element[] = [
 ];
 
 interface ResidentsSelectorProps {
-  value: number;
-  onChange: (value: number) => void;
+  readonly value: number;
+  readonly onChange: (value: number) => void;
 }
 
 /**

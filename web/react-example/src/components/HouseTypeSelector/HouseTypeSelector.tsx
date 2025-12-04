@@ -10,8 +10,8 @@ import {
 } from '../icons';
 
 interface HouseTypeSelectorProps {
-  value: string;
-  onChange: (value: string) => void;
+  readonly value: string;
+  readonly onChange: (value: string) => void;
 }
 
 /**

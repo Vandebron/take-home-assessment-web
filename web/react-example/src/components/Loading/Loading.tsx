@@ -5,15 +5,15 @@ interface LoadingProps {
   /**
    * Text to display below the spinner
    */
-  text?: string;
+  readonly text?: string;
   /**
    * Size of the spinner
    */
-  size?: 'small' | 'medium' | 'large';
+  readonly size?: 'small' | 'medium' | 'large';
   /**
    * Whether to display as fullscreen overlay
    */
-  fullscreen?: boolean;
+  readonly fullscreen?: boolean;
 }
 
 /**
@@ -32,7 +32,7 @@ export default function Loading({
   const spinnerClass = `${styles.spinner} ${styles[size]}`;
 
   return (
-    <div className={containerClass} role="status" aria-live="polite">
+    <output className={containerClass} aria-live="polite">
       <div className={styles.content}>
         <div className={spinnerClass} aria-hidden="true">
           <div className={styles.spinnerRing}></div>
@@ -43,6 +43,6 @@ export default function Loading({
         {text && <p className={styles.text}>{text}</p>}
         <span className={styles.srOnly}>Pagina wordt geladen</span>
       </div>
-    </div>
+    </output>
   );
 }

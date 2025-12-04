@@ -3,8 +3,8 @@ import { Electric, ElectricAndGas } from '../icons';
 import styles from './ProductSelector.module.css';
 
 interface ProductSelectorProps {
-  value?: string;
-  onChange?: (value: string) => void;
+  readonly value?: string;
+  readonly onChange?: (value: string) => void;
 }
 
 /**
