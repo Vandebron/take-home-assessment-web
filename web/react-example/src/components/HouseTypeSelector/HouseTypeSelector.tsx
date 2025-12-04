@@ -68,7 +68,7 @@ export default function HouseTypeSelector({ value, onChange }: HouseTypeSelector
   }, []);
 
   return (
-    <div className={styles.container} role="group" aria-label="House type selection">
+    <fieldset className={styles.container} aria-label="House type selection">
       {houseTypes.map(({ id, label, icon: Icon }) => (
         <button
           key={id}
@@ -82,6 +82,6 @@ export default function HouseTypeSelector({ value, onChange }: HouseTypeSelector
           {Icon ?? null}
         </button>
       ))}
-    </div>
+    </fieldset>
   );
 }

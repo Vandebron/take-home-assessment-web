@@ -44,7 +44,7 @@ export default function ProductSelector({ value = 'electricity', onChange }: Pro
   };
 
   return (
-    <div className={styles.container} role="group" aria-label="Product type selection">
+    <fieldset className={styles.container} aria-label="Product type selection">
       {products.map(({ id, label, icon: Icon }) => (
         <button
           key={id}
@@ -60,6 +60,6 @@ export default function ProductSelector({ value = 'electricity', onChange }: Pro
           <span className={styles.label}>{label}</span>
         </button>
       ))}
-    </div>
+    </fieldset>
   );
 }

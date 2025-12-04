@@ -61,7 +61,7 @@ export const calculateConsumption = (
   // Solar panels reduce electricity consumption by 30%
   const solarPanelMultiplier = hasSolarPanels
     ? 1 - CONSUMPTION_CONSTANTS.SOLAR_PANEL_REDUCTION
-    : 1.0;
+    : 1;
 
   // Calculate electricity consumption in kWh per year
   const electricity = Math.round(

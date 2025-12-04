@@ -14,7 +14,7 @@ export const CONSUMPTION_CONSTANTS = {
  */
 export const HOUSE_TYPE_MULTIPLIERS: Record<string, number> = {
   apartment: 0.8, // Smallest, shared walls
-  townhouse: 1.0, // Baseline
+  townhouse: 1, // Baseline
   'corner-house': 1.15, // One exposed side
   'two-under-one-roof': 1.25, // Semi-detached
   'detatched-house': 1.4, // Largest, all sides exposed
@@ -42,7 +42,7 @@ export const PRODUCT_LABELS: Record<string, string> = {
 /**
  * Default multiplier when house type is unknown
  */
-export const DEFAULT_MULTIPLIER = 1.0;
+export const DEFAULT_MULTIPLIER = 1;
 
 /**
  * Maximum number of residents allowed in the calculator

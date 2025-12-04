@@ -27,7 +27,7 @@ interface ResidentsSelectorProps {
  */
 export default function ResidentsSelector({ value, onChange }: ResidentsSelectorProps) {
   return (
-    <div className={styles.container} role="group" aria-label="Number of residents selection">
+    <fieldset className={styles.container} aria-label="Number of residents selection">
       {residentOptions.map((residentOption, index) => (
         <button
           key={`residentOption-${index + 1}`}
@@ -40,6 +40,6 @@ export default function ResidentsSelector({ value, onChange }: ResidentsSelector
           <div className={styles.icons}>{residentOption}</div>
         </button>
       ))}
-    </div>
+    </fieldset>
   );
 }
