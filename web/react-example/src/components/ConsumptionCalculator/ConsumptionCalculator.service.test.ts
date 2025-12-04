@@ -41,8 +41,8 @@ describe('ConsumptionCalculator.service', () => {
       expect(getHouseTypeMultiplier('apartment')).toBe(0.8);
     });
 
-    it('should return 1.0 for townhouse (baseline)', () => {
-      expect(getHouseTypeMultiplier('townhouse')).toBe(1.0);
+    it('should return 1 for townhouse (baseline)', () => {
+      expect(getHouseTypeMultiplier('townhouse')).toBe(1);
     });
 
     it('should return 1.4 for detached house', () => {
@@ -50,7 +50,7 @@ describe('ConsumptionCalculator.service', () => {
     });
 
     it('should return default multiplier for unknown types', () => {
-      expect(getHouseTypeMultiplier('unknown')).toBe(1.0);
+      expect(getHouseTypeMultiplier('unknown')).toBe(1);
     });
   });
 

@@ -11,7 +11,6 @@ import {
   getProductLabel,
   getHouseTypeMultiplier,
   isValidResidentsCount,
-  ConsumptionResult,
 } from './ConsumptionCalculator.service';
 import { MIN_RESIDENTS, MAX_RESIDENTS } from '../constants';
 
@@ -60,8 +59,8 @@ export default function ConsumptionCalculator() {
 
     if (mode === 'manual') {
       console.log('Manual input:', {
-        electricity: parseInt(manualElectricity) || 0,
-        gas: parseInt(manualGas) || 0,
+        electricity: Number.parseInt(manualElectricity, 10) || 0,
+        gas: Number.parseInt(manualGas, 10) || 0,
       });
       // Here you would typically navigate or submit
     } else {
@@ -77,12 +76,14 @@ export default function ConsumptionCalculator() {
     <>
       <section className={styles.calculator} aria-labelledby="calculator-title">
         <header className={styles.header}>
-          <h1 id="calculator-title" className={styles.title}>
-            Verbruik berekenen
+          <div className={styles.titleGroup}>
+            <h1 id="calculator-title" className={styles.title}>
+              Verbruik berekenen
+            </h1>
             <button onClick={toggleMode} className={styles.link} type="button">
               {mode === 'calculator' ? 'Ik weet mijn verbruik' : 'Help mij schatten'}
             </button>
-          </h1>
+          </div>
           <button type="button" className={styles.closeButton} aria-label="Close">
             ×
           </button>
@@ -131,8 +132,7 @@ export default function ConsumptionCalculator() {
                         <span
                           id="solarPanels-info"
                           className={styles.infoIcon}
-                          role="img"
-                          aria-label="Informatie over zonnepanelen"
+                          aria-hidden="true"
                         >
                           i
                         </span>
