@@ -14,3 +14,10 @@ export const PRODUCT_TYPES = {
   } as const;
 
 export type ProductType = typeof PRODUCT_TYPES[keyof typeof PRODUCT_TYPES];
+
+export const CONSUMPTION_TYPES = {
+    ELECTRICITY: 'electricity',
+    GAS: 'gas',
+  } as const;
+  
+  export type ConsumptionType = typeof CONSUMPTION_TYPES[keyof typeof CONSUMPTION_TYPES];

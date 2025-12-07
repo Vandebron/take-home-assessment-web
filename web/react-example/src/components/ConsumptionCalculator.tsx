@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { calculateConsumption } from './consumptionCalculatorUtils';
-import { HOUSE_TYPES, PRODUCT_TYPES } from './types';
-import type { ProductType } from './types';
+import { HOUSE_TYPES, PRODUCT_TYPES, CONSUMPTION_TYPES } from './types';
+import type { ConsumptionType, ProductType } from './types';
 import HouseTypeSelector from './HouseTypeSelector';
 import ResidentsSelector from './ResidentsSelector';
 import ProductSelector from './ProductSelector';
@@ -45,13 +45,13 @@ export default function ConsumptionCalculator() {
   const hasResults = consumption.electricity !== undefined || consumption.gas !== undefined;
 
   const renderConsumptionResult = (
-    type: 'electricity' | 'gas',
+    type: ConsumptionType,
     value: number | undefined,
     unit: string
   ) => {
     if (value === undefined) return null;
     
-    const label = type === 'electricity' ? 'Stroom' : 'Gas';
+    const label = type === CONSUMPTION_TYPES.ELECTRICITY ? 'Stroom' : 'Gas';
     return (
       <p className={styles.resultItem}>
         <span className={styles.resultLabel}>{label}:</span>
@@ -107,9 +107,9 @@ export default function ConsumptionCalculator() {
         {/* Consumption Results */}
         {hasResults && (
           <div className={styles.results}>
-            <h3 className={styles.resultsTitle}>Geschat jaarverbruik:</h3>
-            {renderConsumptionResult('electricity', consumption.electricity, 'kWh')}
-            {renderConsumptionResult('gas', consumption.gas, 'm³')}
+            <h3 className={styles.resultsTitle}>Geschat jaarverbruik: </h3>
+            {renderConsumptionResult(CONSUMPTION_TYPES.ELECTRICITY, consumption.electricity, 'kWh')}
+            {renderConsumptionResult(CONSUMPTION_TYPES.GAS, consumption.gas, 'm³')}
           </div>
         )}
 
