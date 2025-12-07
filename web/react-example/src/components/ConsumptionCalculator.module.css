@@ -67,7 +67,7 @@
 .footer {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 
 .checkbox {
@@ -95,4 +95,38 @@
 
 .button:hover {
   background-color: #374151;
+}
+
+.results {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: #f9fafb;
+  border-radius: 0.5rem;
+  border: 1px solid #e5e7eb;
+}
+
+.resultsTitle {
+  margin: 0 0 1rem 0;
+  color: #1f2937;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.results p {
+  margin: 0.5rem 0;
+  color: #374151;
+}
+
+.resultItem {
+  margin: 0.5rem 0;
+}
+
+.resultLabel {
+  font-weight: 500;
+  color: #374151;
+}
+
+.resultValue {
+  font-weight: 600;
+  color: #1f2937;
 }

@@ -7,3 +7,10 @@ export const HOUSE_TYPES = {
   } as const;
   
 export type HouseType = typeof HOUSE_TYPES[keyof typeof HOUSE_TYPES];
+
+export const PRODUCT_TYPES = {
+    ELECTRIC: 'electric',
+    ELECTRIC_AND_GAS: 'electric-and-gas'
+  } as const;
+
+export type ProductType = typeof PRODUCT_TYPES[keyof typeof PRODUCT_TYPES];
