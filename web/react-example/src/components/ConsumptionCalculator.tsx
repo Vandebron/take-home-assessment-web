@@ -72,19 +72,23 @@ export default function ConsumptionCalculator() {
         <div className={styles.row}>
           <div className={styles.section}>
             <p className={styles.label}>
-              Type woning: {getHouseTypeLabel(houseType)}
+              Type woning: <span className={styles.value}>{getHouseTypeLabel(houseType)}</span>
             </p>
             <HouseTypeSelector value={houseType} onChange={setHouseType} />
           </div>
           <div className={styles.section}>
-            <p className={styles.label}>Aantal bewoners: {residents}</p>
+            <p className={styles.label}>
+              Aantal bewoners: <span className={styles.value}>{residents}</span>
+            </p>
             <ResidentsSelector value={residents} onChange={handleResidentsSelectorChange} />
           </div>
         </div>
 
         <div className={styles.row}>
           <div className={styles.section}>
-            <p className={styles.label}>Product: {getProductLabel(product)}</p>
+            <p className={styles.label}>
+              Product: <span className={styles.value}>{getProductLabel(product)}</span>
+            </p>
             <ProductSelector value={product} onChange={setProduct} />
           </div>
           <div className={styles.section}>
