@@ -45,39 +45,51 @@
 .content {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 3rem; /* Increased gap between rows for better separation */
 }
 
 .row {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  gap: 2rem; /* Add gap between sections in each row */
 }
 
 .section {
   flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .label {
   color: #374151;
   font-weight: 500;
   margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+.value {
+  color: #1f2937;
+  font-weight: 600;
 }
 
 .footer {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 
 .checkbox {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  margin-top: 0;
+  padding-top: 0.25rem; /* Small adjustment to align with labels */
 }
 
 .infoIcon {
   color: #9ca3af;
+  margin-left: 0.5rem;
 }
 
 .button {
@@ -95,4 +107,38 @@
 
 .button:hover {
   background-color: #374151;
+}
+
+.results {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: #f9fafb;
+  border-radius: 0.5rem;
+  border: 1px solid #e5e7eb;
+}
+
+.resultsTitle {
+  margin: 0 0 1rem 0;
+  color: #1f2937;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.results p {
+  margin: 0.5rem 0;
+  color: #374151;
+}
+
+.resultItem {
+  margin: 0.5rem 0;
+}
+
+.resultLabel {
+  font-weight: 500;
+  color: #374151;
+}
+
+.resultValue {
+  font-weight: 600;
+  color: #1f2937;
 }

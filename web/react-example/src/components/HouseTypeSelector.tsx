@@ -1,62 +1,60 @@
-import { JSX, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
+import type { ComponentType } from 'react';
 import { getHouseTypes } from './HouseTypeSelector.service';
 import styles from './HouseTypeSelector.module.css';
-import {  HouseApartment, HouseRowHome } from './icons';
+import { HOUSE_TYPES } from './types.ts';
+import { HouseApartment, HouseRowHome, HouseCornerHouse, HouseSemiDetached, HouseFreestanding } from './icons';
 
 interface HouseTypeSelectorProps {
   value: string;
   onChange: (value: string) => void;
 }
 
-type HouseType = {
+interface HouseType {
   id: string;
   label: string;
-  icon: JSX.Element;
+  icon: ComponentType;
+}
+
+const iconMap: Record<string, ComponentType> = {
+  [HOUSE_TYPES.APARTMENT]: HouseApartment,
+  [HOUSE_TYPES.TOWNHOUSE]: HouseRowHome,
+  [HOUSE_TYPES.CORNER_HOUSE]: HouseCornerHouse,
+  [HOUSE_TYPES.TWO_UNDER_ONE_ROOF]: HouseSemiDetached,
+  [HOUSE_TYPES.DETACHED_HOUSE]: HouseFreestanding,
 };
 
 export default function HouseTypeSelector({ value, onChange }: HouseTypeSelectorProps) {
-
   const [houseTypes, setHouseTypes] = useState<HouseType[]>([]);
-  console.log('HouseTypeSelector - houseTypes=', houseTypes);
 
-  useEffect(() => {
-    const onLoad = async () => {
-      let types = await getHouseTypes();
-      console.log('HouseTypeSelector - types=', types);
-      (types as {id: string, icon?: JSX.Element}[]).forEach((type) => {
-        // two-person homes
-        if (type.id === 'apartment' || type.id === 'townhouse') {
-          if (type.id === 'apartment') {
-            type.icon = <HouseApartment />;
-          } else if (type.id === 'townhouse') {
-            type.icon = <HouseRowHome />;
-          } else {
-            type.icon = <HouseRowHome />;
-          }
-        } else {
-          type.icon = <HouseRowHome />
-        }
+useEffect(() => {
+    const loadHouseTypes = async () => {
+      const types = await getHouseTypes();
+      const typesWithIcons = types.map(type => {
+        return {
+          id: type.id,
+          label: type.label,
+          icon: iconMap[type.id] || HouseRowHome
+        };
       });
-      setHouseTypes(types as HouseType[]);
+      setHouseTypes(typesWithIcons);
     };
-    onLoad();
-  })
+    loadHouseTypes();
+  }, []);
 
   return (
     <div className={styles.container}>
-      {houseTypes.map((type) => {
-        const Icon = type.icon;
+      {houseTypes.map((option) => {
+        const Icon = option.icon;
         return (
           <button
-            key={type.id}
-            name={type.id}
-            role='button'
-            aria-label={type.id}
-            onClick={() => onChange(type.id)}
-            className={`${styles.button} ${value === type.id ? styles.selected : ''}`}
-            aria-selected={value === type.id}
+            key={option.id}
+            className={`${styles.button} ${value === option.id ? styles.selected : ''}`}
+            onClick={() => onChange(option.id)}
+            aria-label={option.label}
+            aria-selected={value === option.id}
           >
-            {Icon ?? null}
+            <Icon />
           </button>
         );
       })}
