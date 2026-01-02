@@ -2,7 +2,8 @@
 Thanks for applying to Vandebron!! If you've made it this far we already think you're pretty great. Your assignment is below.
 
 ## Setup
-- Fork the repo, check out a branch, and decide on a framework you'd like to complete the project in (currently only React)
+- Clone the project - At the end of this you'll be asked to send us a zip file including your `.git` folder. We ask that you please not create a pull request with your changes (as this will show other candidates your solutions)
+- and decide on a framework you'd like to complete the project in (currently only React).
 - Start the project by following the "Getting Started" instructions in the framework-specific readme (e.g. [web/react-example/readme.md](web/react-example/readme.md)) Compare what your app looks like now with the desired app shown below.
 
 <table>
@@ -32,8 +33,10 @@ There are several areas you can focus on. Pick what you'd like to focus on and i
 - [ ] Calculate the estimated usage based on the inputs provided - there are no strict rules here but generally the "bigger" the house, the higher your consumption, same for amount of people, etc. Should return a type of `{ electricity: number, gas?: number }`.
 - [ ] For several reasons, the app isn't production-ready. Make changes so that we can be confident the app will run without issue once we're ready to release.
 
+Happy coding 😃!!
+
 ## All Done?
-Once you're done, zip up your solution (with the `.git` folder included,) and send it back to us via your favorite file share: Google Drive, Dropbox, etc. During your in-person interview, we'll review the PR so be ready to discuss the changes you've made. Happy coding 😃!!
+Once you're done, zip up your solution (with the `.git` folder included,) and send it back to us via your favorite file share: Google Drive, Dropbox, etc. During your in-person interview, we'll review the PR so be ready to discuss the changes you've made. Remember to _not_ create a pull request with your changes.
 
 ## After the Interview
-Make sure you delete your fork of the project (or otherwise ensure it's not visible to anyone other than yourself)
+If you created a fork as part of this process, make sure you delete the fork (or otherwise ensure it's not visible to anyone other than yourself)
